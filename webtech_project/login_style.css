@@ -37,11 +37,16 @@
 .navbar ul
 {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-self: center;
-  flex-direction: row;
   padding: 3vh,2vh;
+  gap:3vw;
   margin:2vh;
+
+}
+.navbar ul a
+{
+  text-decoration: none;
 }
 .image-scroller1
 {  
@@ -261,4 +266,3 @@
 { 
    text-decoration: underline;  
 }
-
