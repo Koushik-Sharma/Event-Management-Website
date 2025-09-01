@@ -245,19 +245,19 @@
    color : white;
    box-shadow : 4vh 0 10vh blue,-4vh 0 10vh green; 
 }
-.login-box .Register
+.login-box .register
 {
     font-size : 12px;
     text-align: center;
     margin-top: 2vh;
 
 }
-.Register p a
+.register p a
 {  color : mediumaquamarine; 
    text-decoration : none; 
    font-weight : 600; 
 }
-.Register p a:hover
+.register p a:hover
 { 
    text-decoration: underline;  
 }
