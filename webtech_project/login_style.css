@@ -246,7 +246,6 @@
 .login-box .btn:hover
 {
    z-index : 0;
-   box-shadow : 4vh 0 10vh blue;  
    color : white;
    box-shadow : 4vh 0 10vh blue,-4vh 0 10vh green; 
 }
@@ -266,3 +265,4 @@
 { 
    text-decoration: underline;  
 }
+
