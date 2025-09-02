@@ -1,229 +1,34 @@
-*
-{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-    font-family: "poppins" sans-serif;
-}
-body
-{
-   overflow:hidden;
-}
-.navbar
-{
-   width : 100%;
-   height : 10vh;
-   background: transparent;
-   position:fixed;
-   z-index:10;
-   display:flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   padding : 3vh;
-}
-.navbar ul
-{
-  display:flex;
-  justify-content: space-evenly;
-  align-self: center;
-  padding: 3vh,2vh;
-  gap:3vw;
-  margin:2vh;
-
-}
-.navbar ul a
-{
-  text-decoration: none;
-}
-.event-container
-{
-    margin : 0;
-    overflow: hidden;
-    background-image: url(images/img11.jpg);
-    background-size: cover;
-    background-position: center;
-}
-h1
-{
-    position: relative;
-    font-size: 40px;
-    width:120px;
-    left:20px;
-    top:8vh;
-    left:5vh;
-}
-h1::after
-{   position:absolute;
-    content:"";
-    height:5px;
-    width:100%;
-    bottom:0;
-    left:0;
-    border-radius: 10px;
-    background-image: linear-gradient(to right,blue,green);
-    transition: 0.3s ease-in-out;
-}
-h1:hover::after
-{
-    width:0;
-    transition: 0.3s ease-in-out;
-   
-}
-h1:hover
-{
-    color: white;
-    cursor: pointer;
-}
-.container
-{
-    margin:10vh 4vh 4vh 4vh;
-    display: grid;
-    grid-template-rows:10vh 10vh 10vh 10vh 10vh 10vh 10vh;
-    grid-template-columns:10vw 10vw 10vw 10vw 10vw 10vw 10vw;
-    grid-auto-flow: row;
-    border-radius: 10px;
-    gap : 2px;
-    padding: 30px;
-    background : transparent;
-    backdrop-filter : blur(2vh);
-    border : 2px solid rgb(84, 95, 95);
-    border-radius: 2vh;
-    box-shadow: 0 0 10px rgb(84, 95, 95);
-}
-
-.event-card-1
-{
-    grid-row: 1/3;
-    grid-column:1/4;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img1.jpg);
-    background-size: cover;
-    background-position: center;
-    animation:scrollx1 5s linear infinite alternate;
-}
-.event-card-1 a,.event-card-2 a,.event-card-3 a,.event-card-4 a,.event-card-5 a,.event-card-6 a
-{ 
-    position : absolute;
-    bottom: 0;
-    left:50%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    z-index: 1;
-    color : white;
-    font-size: 20px;
-    padding: 5px;
-    transition: 0.3s ease-in-out;
-
-}
-.event-card-1 a::after,.event-card-2 a::after,.event-card-3 a::after,.event-card-4 a::after,.event-card-5 a::after,.event-card-6 a::after
- {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0%;
-    width: 103%;
-    height: 107%; 
-    background-image: linear-gradient(to right, green,blue); 
-    border-radius: 20px; 
-    z-index: -1;     
-}
-.event-card-2
-{
-    grid-row: 1/3;
-    grid-column:4/7;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img2.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: 0.3s ease-in-out;
-    animation:scrollx1 5s linear infinite alternate;
-}
-.event-card-3
-{
-    grid-row: 1/3;
-    grid-column:7/10;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img3.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: 0.3s ease-in-out;
-    animation:scrollx1 5s linear infinite alternate;
-}
-.event-card-4
-{
-    grid-row: 3/6;
-    grid-column:1/5;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img4.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: 0.3s ease-in-out;
-    animation:scrollx2 5s linear infinite alternate;
-}
-
-.event-card-5
-{
-    grid-row: 3/6;
-    grid-column:5/10;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img5.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: 0.3s ease-in-out;
-    animation:scrollx2 5s linear infinite alternate;
-    
-}   
-
-.event-card-6
-{
-    grid-row: 6/10;
-    grid-column:1/10;
-    border: 2px solid blue; 
-    border-radius: 20px;
-    position: relative;
-    background-image: url(images/img6.jpg);
-    background-size: cover;
-    background-position: center;
-    transition: 0.3s ease-in-out;
-    animation:scrollx1 5s linear infinite alternate;
-}
-.event-card-1:hover,.event-card-2:hover,.event-card-3:hover,.event-card-4:hover,.event-card-5:hover,.event-card-6:hover
-{
-    scale: 1.2;
-    transition: 0.3s ease-in-out;
-    box-shadow : 4vh 0 10vh blue,-4vh 0 10vh green; 
-    z-index:10;
-}
-@keyframes scrollx1 
-{
-    0%
-    {
-        transform:translateX(-33px);
-    }   
-    100%
-    {
-        transform:translateX(33px);
-    }
-}
-@keyframes scrollx2
-{
-    0%
-    {
-        transform:translateX(33px);
-    }   
-    100%
-    {
-        transform:translateX(-33px);
-    }
-}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> EVENT PAGE </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel = "stylesheet" href = "event_style.css">
+    </head>
+    <body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="event.html" class = "Event-btn">Events</a></li>
+         <li><a href="#">Contact</a></li>
+         <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class = "event-container">
+     <h1>Events</h1>
+     <div class = "container">
+        <div class = event-card-1><a href = "#">Night Life</a></div>
+        <div class = event-card-2><a href = "#">Nature</a></div>
+        <div class = event-card-3><a href = "#">Clubbing</a></div>
+        <div class = event-card-4><a href = "#">Sporting</a></div>
+        <div class = event-card-5><a href = "#">Camping</a></div>
+        <div class = event-card-6><a href = "#">Tea Party</a></div>
+     </div>
+     </div>
+    </body>
+</html>
