@@ -102,6 +102,7 @@ h1:hover
     background-image: url(images/img1.jpg);
     background-size: cover;
     background-position: center;
+    animation:scrollx1 5s linear infinite alternate;
 }
 .event-card-1 a,.event-card-2 a,.event-card-3 a,.event-card-4 a,.event-card-5 a,.event-card-6 a
 { 
@@ -140,6 +141,7 @@ h1:hover
     background-size: cover;
     background-position: center;
     transition: 0.3s ease-in-out;
+    animation:scrollx1 5s linear infinite alternate;
 }
 .event-card-3
 {
@@ -152,6 +154,7 @@ h1:hover
     background-size: cover;
     background-position: center;
     transition: 0.3s ease-in-out;
+    animation:scrollx1 5s linear infinite alternate;
 }
 .event-card-4
 {
@@ -164,6 +167,7 @@ h1:hover
     background-size: cover;
     background-position: center;
     transition: 0.3s ease-in-out;
+    animation:scrollx2 5s linear infinite alternate;
 }
 
 .event-card-5
@@ -177,6 +181,7 @@ h1:hover
     background-size: cover;
     background-position: center;
     transition: 0.3s ease-in-out;
+    animation:scrollx2 5s linear infinite alternate;
     
 }   
 
@@ -191,6 +196,7 @@ h1:hover
     background-size: cover;
     background-position: center;
     transition: 0.3s ease-in-out;
+    animation:scrollx1 5s linear infinite alternate;
 }
 .event-card-1:hover,.event-card-2:hover,.event-card-3:hover,.event-card-4:hover,.event-card-5:hover,.event-card-6:hover
 {
@@ -198,4 +204,26 @@ h1:hover
     transition: 0.3s ease-in-out;
     box-shadow : 4vh 0 10vh blue,-4vh 0 10vh green; 
     z-index:10;
+}
+@keyframes scrollx1 
+{
+    0%
+    {
+        transform:translateX(-33px);
+    }   
+    100%
+    {
+        transform:translateX(33px);
+    }
+}
+@keyframes scrollx2
+{
+    0%
+    {
+        transform:translateX(33px);
+    }   
+    100%
+    {
+        transform:translateX(-33px);
+    }
 }
