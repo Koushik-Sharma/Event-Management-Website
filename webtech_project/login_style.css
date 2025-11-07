@@ -1,0 +1,292 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box; 
+}
+.layout
+{
+    overflow: hidden;
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    flex-direction: row;
+    min-height : 100vh;
+    background : url('images/img11.jpg') no-repeat;
+    background-size : cover;
+    background-position : center;
+    perspective: 1000px;
+    margin: 0;
+    padding: 0 20vh;
+    z-index:-10;
+}
+.navbar
+{
+   width : 100%;
+   height : 10vh;
+   background: transparent;
+   position:fixed;
+   z-index:10;
+   display:flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding : 3vh;
+}
+.navbar ul
+{
+  display:flex;
+  justify-content: space-evenly;
+  align-self: center;
+  gap:3vw;
+  margin:2vh;
+  list-style: none;
+}
+.navbar ul a
+{
+  text-decoration: none;
+}
+.image-scroller1
+{  
+ display : flex;
+ position : relative;
+ flex-direction:column;
+ gap : 2vh;
+ height:100vh;
+ width :20vw;
+ transform: rotateY(50deg);
+ transform-style: preserve-3d;
+
+}
+.image-scroller1 .images
+{
+   display : flex;
+   flex-direction: column;
+   justify-content: center;
+   overflow: hidden;
+   border : none;
+   outline : none;
+   border : 2px solid  rgb(84, 95, 95);
+   box-shadow:  0 0 10px rgb(84, 95, 95);;
+   border-radius: 20px;
+   height:30vh;
+   width:20vw;
+   animation:scrolly 7s linear infinite alternate;
+   transition: 0.2s ease;
+   cursor : pointer;
+}
+@keyframes scrolly {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.images:hover
+{
+   transition: 0.2s ease;
+   scale : 1.2;
+   z-index: 10;                
+   box-shadow: 0 10px 25px rgba(1, 43, 230, 0.6);
+
+}
+
+.image-scroller2
+{  
+ display : flex;
+ position : relative;
+ flex-direction:column;
+ gap : 2vh;
+ height:100vh;
+ width :20vw;
+ transform: rotateY(-50deg);
+ transform-style: preserve-3d;
+ z-index: 2;
+}
+.image-scroller2 .images2
+{
+   display : flex;
+   flex-direction: column;
+   justify-content: center;
+   overflow: hidden;
+   border : none;
+   outline : none;
+   border : 2px solid  rgb(84, 95, 95);
+   box-shadow:  0 0 10px rgb(84, 95, 95);;
+   border-radius: 20px;
+   height:30vh;
+   width:20vw;
+   animation:scrolly2 7s linear infinite alternate;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
+   cursor: pointer;
+   position: relative;
+   transition: 0.2s ease;
+}
+
+@keyframes scrolly2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.images2:hover
+{
+  transition: 0.2s ease;
+  scale : 1.2;
+   z-index: 10;                
+  box-shadow: 0 10px 25px rgba(1, 43, 230, 0.6);
+
+}
+
+.login-box,.sign-up-box
+{
+    width : 50vh;
+    height:auto;
+    background : transparent;
+    backdrop-filter : blur(2vh);
+    border : 2px solid rgb(84, 95, 95);
+    color : white;
+    border-radius: 2vh;
+    padding : 3vh 4vh;
+    box-shadow: 0 0 10px rgb(84, 95, 95);
+    
+}
+.login-box h1,.sign-up-box h1
+{ 
+   font-family: "Nunito";
+   font-weight: 100;
+   font-style: normal;
+   text-align: center;
+   position: relative;
+   font-size : 250%;
+  
+}
+.login-box  h1::after,.sign-up-box h1::after
+{
+    display: flex;
+    content : "";
+    background-image : linear-gradient(to right,green,blue);
+    position : absolute;
+    width : 100%;
+    height : 0.8vh;
+    border-radius : 10vh;
+    transition: width 0.3s ease-in-out;
+}
+.login-box h1:hover::after,.sign-up-box h1:hover::after
+{
+    width : 0;
+    transition: width 0.3s ease-in-out;
+
+}
+.input-box{
+   width : 100%;
+   height : 5vh;
+   margin : 3vh 0;
+}
+input{
+   width : 100%;
+   height : 5vh;
+   background: transparent;
+   margin : 3vh 0;
+   border : none;
+   outline: none;
+   border : 2px solid rgb(84, 95, 95);
+   border-radius: 4vh;
+   font-size: 16px;
+   color : white;
+   padding : 2vh 4.5vh 2vh 2vh;
+   font-family:"Nunito", sans-serif;
+   font-weight : 600;
+}
+.input-box input::placeholder
+{
+   color:white;
+   opacity : 0.7;
+}
+.forgot-password
+{
+   display : flex;
+   flex-direction : row-reverse;
+   margin : 2vh 1vh;
+   font-size : 14px;
+   font-family:"Nunito", sans-serif;
+   font-weight : 600;
+}
+.forgot-password a
+{ 
+   color : mediumaquamarine; 
+   text-decoration: none;  
+   margin : 2vh 1vh; 
+}
+.forgot-password a:hover
+{ 
+   text-decoration: underline;  
+}
+.login-box .btn,.sign-up-box .btn
+{  
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   width : 50%;
+   border : none;
+   outline : none;
+   border-radius: 40px;
+   height : 6vh;
+   font-size : 151%;
+   color : rgb(31, 105, 63);
+   font-weight : 800;
+   position : relative;
+   cursor: pointer;
+   font-family: "Nunito";
+   
+}
+.sign-up-box .btn
+{
+   margin:8vh 10vh 0vh;
+}
+.login-box .btn
+{
+    margin: 2vh 10vh;
+}
+.login-box .btn::after,.sign-up-box .btn::after   
+{
+   content : "";
+   position : absolute;
+   background-image : linear-gradient(to left,blue,green);
+   height : 115%;
+   width  : 104%;
+   border-radius : 40px;
+   
+   z-index : -1;
+}
+.login-box .btn:hover,.sign-up-box .btn:hover
+{
+   z-index : 0; 
+   color : white;
+   box-shadow : 4vh 0 10vh blue,-4vh 0 10vh green; 
+}
+.login-box .sign-up, .sign-up-box .login
+{
+    font-size : 14px;
+    font-family:"Nunito", sans-serif;
+    font-weight : 600;
+    text-align: center;
+    margin-top: 2vh;
+
+}
+.sign-up p a,.login p a
+{  color : mediumaquamarine; 
+   text-decoration : none; 
+   font-weight : 600; 
+}
+.sign-up p a:hover,.login p a:hover
+{ 
+   text-decoration: underline;  
+}
+.sign-up-box 
+{
+   display:none
+}
