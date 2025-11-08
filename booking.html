@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your events seamlessly with JK Events.">
+    <meta name="keywords" content="Event, Booking, Environment">
+    <meta name="robots" content="FOLLOW, INDEX">
+    <title>Book an Event - JK Events</title>
+    <link rel="stylesheet" href="../home_about/Home/style.css"> <!-- Assuming shared CSS file -->
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo_img">
+            <img src="./images/Logo-BGedit.png" alt="Logo" id="logo">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="../About/about.html">About Us</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="account">
+            <img src="./images/Account.png" alt="Account Logo" id="Account_Icon">
+            <h5>Account</h5>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <div class="booking-section">
+        <h1>Book an Event</h1>
+        <p>Fill in the details below to reserve your spot at one of our events.</p>
+        <form class="booking-form" action="./payment.html" method="get"> <!-- Redirects to payment page -->
+            <label for="event">Select Event:</label>
+            <select id="event" name="event" required>
+                <option value="">Choose an event</option>
+                <option value="cultural-festival">Cultural Festival</option>
+                <option value="community-gathering">Community Gathering</option>
+                <option value="eco-friendly-event">Eco-Friendly Event</option>
+            </select>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit" class="book-btn">Book Now</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="top">
+            <div class="links">
+                <h5>Useful Links:</h5>
+                <a href="../About/about.html">About Us</a>
+                <a href="#">Events</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="reach">
+                <h5>More About Us:</h5>
+                <a href="https://github.com/Koushik-Sharma" target="_blank">GitHub</a>
+                <a href="mailto:johnpaulfernandes18@gmail.com">Gmail</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>&copy; 2025 JK Events Goa. All Rights Reserved</h5>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script> <!-- Assuming shared JS -->
+</body>
+</html>
