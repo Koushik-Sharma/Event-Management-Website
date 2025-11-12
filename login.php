@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> LOGIN PAGE </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel = "stylesheet" href = "login_style.css">
+
+    </head>
+    <body>
+       <?php include 'navbar.php'; ?>
+        <div class ="layout">
+        <div class = "image-scroller1">
+        <div class = "images">
+          <img src = "images/img10.jpeg"></img>
+        </div>
+         <div class = "images">
+          <img src = "images/img6.jpg"></img>
+         </div>
+           <div class = "images">
+          <img src = "images/img7.jpg"></img>
+           </div>
+           <div class = "images">
+          <img src = "images/img8.jpg"></img>
+           </div>
+           <div class = "images">
+          <img src = "images/img9.jpg"></img>
+           </div>
+        </div>
+
+<div class = "Boxes">
+        <div class = "login-box" id = "login-box">
+            <form method = "post" action = "register.php">
+                
+                <h1>Login</h1>
+                <div class = "input-box">
+                <input type = "text" name = "Email" id = "Email" placeholder = "Email" required>
+                </div>
+                <div class = "input-box">
+                <input type = "password" name = "Password" id = "Password" placeholder = "Password" required>
+                </div>
+                <div>
+                    <button type = "submit" class = "btn" name = "login" style = "margin-top : 10vh;">LOGIN</button>
+                </div>
+                <div class = "sign-up" id = "sign-up">
+                <p>Don't have an account? <a href ="#">Sign Up</a> </p>
+                </div>
+            </form>
+            </div>
+            <div class = "sign-up-box" id = "sign-up-box">
+                 <form method = "post" action = "register.php">
+
+                <h1>Sign Up</h1>
+                <div class = "input-box">
+                <input type = "text" name = "FirstName" id = "FirstName" placeholder = "First Name" required>
+                </div>
+                <div class = "input-box">
+                <input type = "text" name = "LastName" id = "LastName" placeholder = "Last Name" required>
+                </div>
+                 <div class = "input-box">
+                <input type = "text" name = "Email" id = "Email" placeholder = "Email" required>
+                </div>
+                <div class = "input-box">
+                <input type = "password" name = "Password" id = "Password" placeholder = "Password" required>
+                </div>
+                <div>
+                    <button type = "submit" class = "btn" name = "sign_up" >Sign Up</button>
+                </div>
+                <div class = "login" id = "login">
+                <p>Already have an account? <a href ="#">Login</a> </p>
+               </div>
+            </form>
+            </div>
+        </div>
+   <div class = "image-scroller2">
+        <div class = "images2">
+          <img src = "images/img1.jpg"></img>
+        </div>
+         <div class = "images2">
+          <img src = "images/img2.jpg"></img>
+         </div>
+           <div class = "images2">
+          <img src = "images/img3.jpg"></img>
+           </div>
+           <div class = "images2">
+          <img src = "images/img4.jpg"></img>
+           </div>
+           <div class = "images2">
+          <img src = "images/img5.jpg"></img>
+           </div>
+           </div>
+       </div>
+               <script src = "login_script.js"></script>
+    </body>
+</html>
