@@ -1,4 +1,4 @@
-
+/* Existing styles from your old navbar.css - preserved exactly */
 html, body {
   margin: 0;
   padding: 0;
@@ -53,5 +53,53 @@ body {
   transform: scale(1.08);
 }
 
+/* New dropdown styles - added for the updated navbar.php */
+.dropdown {
+  position: relative; /* Allows absolute positioning of submenu */
+}
 
+.dropdown-toggle {
+  cursor: pointer; /* Makes it clear it's clickable */
+  /* Inherits color, font, and hover from .nav-links li a */
+}
 
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positions below the toggle */
+  left: 0;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); Subtle border matching theme */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  min-width: 150px; /* Ensures it's wide enough */
+  z-index: 101; /* Slightly higher than navbar to appear on top */
+  list-style: none; /* Removes bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* No border on last item */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333; /* Dark text for contrast on light background */
+  font-size: 16px; /* Slightly smaller than navbar links */
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  /* background-color: rgba(127, 255, 212, 0.2); Subtle aquamarine hover to match theme */
+  color: #000; /* Darker on hover */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Shows submenu on hover */
+}

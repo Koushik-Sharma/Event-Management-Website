@@ -17,38 +17,54 @@
     margin-bottom: 62px;
 }
 
+/* Liquid Glass Payment Form */
 .payment-form {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 45px;
     max-width: 600px;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    transition: transform 0.3s ease;
+}
+
+.payment-form:hover {
+    transform: translateY(-4px);
 }
 
 .payment-form label {
     display: block;
     margin-bottom: 8px;
     font-size: 1.2rem;
-    color: #bdb4fd;
+    color: #d4ccff;
 }
 
 .payment-form input {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #bdb4fd;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     font-size: 1rem;
-    background-color: #ffffff;
-    color: #000;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* White Placeholder Text */
+.payment-form input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .payment-form input:focus {
     outline: none;
-    border-color: blueviolet;
+    border-color: #bdb4fd;
+    background: rgba(255, 255, 255, 0.2);
 }
 
+/* Pay Button */
 .pay-btn {
     padding: 12px 24px;
     font-family: sans-serif;
@@ -69,6 +85,7 @@
     color: #ffffff;
 }
 
+/* Home Button */
 .home-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -87,4 +104,42 @@
 .home-btn:hover {
     background-color: #bdb4fd;
     color: #ffffff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(0, 0, 78);
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.links, .reach {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a, .reach a {
+    text-decoration: none;
+    color: white;
+    margin: 9px;
+    display: inline;
+}
+
+.links h5, .reach h5 {
+    margin-bottom: 9px;
+}
+
+.top {
+    display: flex;
+    margin: 18px;
+}
+
+.reach {
+    margin-left: 75%;
 }

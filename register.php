@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "connect_db.php";
 
 if (isset($_POST['sign_up']) && isset($_POST['Password'])) {
     $firstname = $_POST['FirstName'];

@@ -45,9 +45,8 @@
             <div class="links">
                 <h5>Useful Links:</h5>
 
-                <a href="#">About Us</a>
-                <a href="#">Events</a>
-                <a href="#">Contact Us</a>
+                <a href="home.php">Home</a>
+                <a href="event.php">Events</a>
             </div>
 
             <div class="reach">
