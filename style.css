@@ -1,4 +1,4 @@
-/* Home page styling */
+
 
 html
 {
@@ -277,9 +277,6 @@ footer
   opacity: 1;
 }
 
-/* Add or update these at the END of ./style.css */
-
-/* Ensure html and body take full height for flexbox */
 html {
   height: 100%;
 }
@@ -287,11 +284,10 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
-  margin-top: 0; /* Already there, but confirm */
+  min-height: 100vh;
+  margin-top: 0; 
 }
 
-/* Content wrapper - pushes footer to bottom */
 .content {
-  flex: 1; /* Expands to fill space */
+  flex: 1;
 }

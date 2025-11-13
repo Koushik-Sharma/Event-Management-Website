@@ -48,7 +48,20 @@ if(isset($_POST['login']))
     } 
     else 
     {
-        echo "Invalid email or password";
+        
+        echo '<script>
+        
+        function redirecterror()
+        {
+            window.location.href = "login.php";
+        }
+        
+        
+        alert("Invalid email or password");
+        redirecterror();
+        </script>';
+        
+
     }
 }
 ?>

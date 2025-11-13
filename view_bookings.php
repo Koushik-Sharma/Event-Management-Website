@@ -1,14 +1,13 @@
 <?php
 session_start();
-// Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
 
-include 'connect_db.php'; // Your DB connection file (assuming $conn is the MySQLi connection object)
+include 'connect_db.php'; 
 
-// Fetch user's bookings with event details using MySQLi
+
 $user_id = $_SESSION['user_id'];
 $query = "
     SELECT e.name, e.date, e.time, e.venue, e.description, b.booked_at
@@ -18,7 +17,7 @@ $query = "
     ORDER BY b.booked_at DESC
 ";
 $stmt = mysqli_prepare($conn, $query);
-mysqli_stmt_bind_param($stmt, "i", $user_id); // "i" for integer
+mysqli_stmt_bind_param($stmt, "i", $user_id); 
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $bookings = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -31,11 +30,11 @@ mysqli_stmt_close($stmt);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Bookings - JK Events</title>
-    <link rel="stylesheet" href="./style.css"> <!-- Reuse your existing CSS -->
+    <link rel="stylesheet" href="./style.css"> 
         <style>
-/* === VIEW BOOKINGS PAGE STYLING WITH LIQUID GLASS === */
 
-/* Page background */
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -47,7 +46,7 @@ body {
     flex-direction: column;
 }
 
-/* Frosted-glass wrapper */
+
 .bookings-container {
     max-width: 1000px;
     margin: 6vh auto;
@@ -60,7 +59,7 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Headings */
+
 .bookings-container h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -76,7 +75,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Each booking card (frosted mini-panel) */
+
 .booking-card {
     display: flex;
     flex-wrap: wrap;
@@ -96,7 +95,6 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
-/* Event image */
 .booking-card img {
     width: 180px;
     height: 120px;
@@ -105,7 +103,6 @@ body {
     border: 2px solid rgba(255,255,255,0.5);
 }
 
-/* Text info */
 .booking-info {
     flex: 1;
 }
@@ -130,7 +127,7 @@ body {
     font-style: italic;
 }
 
-/* Empty state */
+
 .no-bookings {
     text-align: center;
     padding: 3rem;
@@ -138,7 +135,7 @@ body {
     color: #eaeaea;
 }
 
-/* Footer matches site look */
+
 footer {
     background: rgba(0, 0, 60, 0.85);
     backdrop-filter: blur(10px);
@@ -163,9 +160,8 @@ footer a:hover {
 </style>
 </head>
 <body>
-    <?php include 'navbar.php'; ?> <!-- Include your updated navbar -->
+    <?php include 'navbar.php'; ?>
     
-    <!-- Wrap main content in .content for flexbox (pushes footer to bottom) -->
     <div class="content">
         <div class="bookings-container">
             <h2>Your Bookings</h2>
@@ -178,7 +174,7 @@ footer a:hover {
             <?php else: ?>
                 <?php foreach ($bookings as $booking): ?>
                     <div class="booking-card">
-                        <img src="./images/event_placeholder.jpg" alt="Event Image"> <!-- Placeholder; replace with dynamic image if available -->
+                        <img src="./images/eventimg1.png" alt="Event Image">
                         <div class="booking-info">
                             <h4><?php echo htmlspecialchars($booking['name']); ?></h4>
                             <p><strong>Date:</strong> <?php echo htmlspecialchars($booking['date']); ?></p>
@@ -193,9 +189,7 @@ footer a:hover {
         </div>
     </div>
 
-    <!-- Footer - now sticks to bottom -->
     <footer>
-        <!-- Copy your footer from home.php here -->
         <div class="top">
             <div class="links">
                 <h5>Useful Links:</h5>
@@ -214,6 +208,6 @@ footer a:hover {
         </div>
     </footer>
 
-    <script src="./index.js"></script> <!-- Reuse your JS if needed -->
+    <script src="./index.js"></script>
 </body>
 </html>
