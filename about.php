@@ -1,0 +1,65 @@
+<!-- About Us page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="Be aware and book the events listed now sleamlessly using our platform.">
+    <meta name="keywords" content="Event, Environment, Bookings">
+    <meta name="robots" content="FOLLOW, INDEX">
+
+    <title>About Us - JK Events</title>
+
+    <link rel="stylesheet" href="./about_style.css">
+</head>
+<body>
+   <?php include 'navbar.php'; ?>
+    <div class="about">
+        <h3>About Us</h3>
+
+        <hr>
+
+        <p id="firstpara">
+            We are two passionate students, Koushik Sharma and John Paul Fernandes pursuing 
+            our degree in Computer Science, currently working on a Web Technology project 
+            that reflects both our technical skills and our commitment to meaningful 
+            innovation. Our project, an Event Management System, is designed to simplify 
+            how events are discovered, organized, and booked—while also raising awareness 
+            about environmental sustainability.
+        </p>
+
+        <p id="secondpara">
+            With a shared interest in web development and user-centered design, we set out to build a platform that not only streamlines event planning but also promotes eco-conscious gatherings and green initiatives. From intuitive booking features to curated listings of environmentally focused events, our system aims to make participation easier and more impactful.
+        </p>
+
+        <p id="thirdpara">
+            This project is more than just an academic requirement—it’s a step toward creating digital solutions that serve communities and support causes that matter. We hope our work inspires others to think creatively, act responsibly, and build with purpose.
+        </p>
+    </div>
+
+
+
+    <footer>
+        <div class="top">
+            <div class="links">
+                <h5>Useful Links:</h5>
+
+                <a href="home.php">Home</a>
+                <a href="event.php">Events</a>
+            </div>
+
+            <div class="reach">
+                <h5>More About Us:</h5>
+
+                <a href="https://github.com/Koushik-Sharma" target="_blank">GitHub</a>
+                <a href="johnpaulfernandes18@gmail.com" target="_blank">Gmail</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h5>&copy; 2025 JK Events Goa. All Rights Reserved</h5>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5vh 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(to right, #120481, #5346bd, #2C5364);
+    background-size: cover;
+    position: relative;
+}
+
+.about {
+    text-align: center;
+    padding: 80px 10vw;
+    margin-top: 0;
+    width: 100%;
+}
+
+.about h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.about hr {
+    width: 60%;
+    height: 4px;
+    margin: 0 auto 50px auto;
+    border: none;
+    background-color: #bdb4fd;
+    border-radius: 10px;
+}
+
+.about p {
+    font-size: 1.4rem;
+    margin-top: 50px;
+    line-height: 1.8;
+    color: #e6e6e6;
+    text-align: justify;
+}
+
+footer {
+    background-color: rgb(0, 0, 78);
+    color: white;
+    padding: 20px 5vw;
+    margin-top: 40px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.links,
+.reach {
+    display: flex;
+    flex-direction: column;
+}
+
+.links h5,
+.reach h5 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #bdb4fd;
+}
+
+.links a,
+.reach a {
+    text-decoration: none;
+    color: white;
+    margin: 6px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover,
+.reach a:hover {
+    color: #8ad5ff;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+

@@ -1,0 +1,293 @@
+
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body 
+{
+  margin-top: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(to right, #120481, #5346bd, #2C5364); 
+  background-size: cover;
+  position: relative;
+}
+
+
+.highlight
+{
+    display: flex;
+    margin-top:10vh;
+}
+
+#Highlight_icon
+{
+    margin-left: -6px;
+}
+
+.text h1
+{
+    font-size: 7rem;
+    margin-top: 57px;
+}
+
+#tagline
+{
+    font-family: fantasy;
+    font-family: math;
+    font-weight: unset;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.action
+{
+    margin-top: 53px;
+    display: flex;
+    justify-content: center;
+}
+
+.action button
+{
+    margin-left: 25px;
+    margin-right: 172px;
+    padding: 12px;
+    font-family: sans-serif;
+    font-size: medium;
+    border: 4px solid #bdb4fd;
+    border-radius: 28px;
+    font-weight: 550;
+    background-color: #ffffff;
+    color: blue;
+    box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.3), 5px 5px 18px #ccc inset;
+}
+
+.action button:hover
+{
+    cursor: pointer;
+
+}
+
+
+
+
+
+.aim
+{
+    text-align: center;
+    padding: 86px;
+    margin-top: 89px;
+}
+
+.aim h3, .events_overview h3
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 17px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.aim p
+{
+    font-size: 1.7rem;
+    margin-top: 62px;
+}
+
+.aim hr
+{
+    background-color: #bdb4fd;
+}
+
+
+
+
+
+
+.card
+{
+    background-color: whitesmoke;
+    margin: 33px;
+    border: 2.4px solid blueviolet;
+    display: flex;
+    color: black;
+    padding: 34px;
+    margin-bottom: 10px;
+}
+
+.events_overview hr
+{
+    background-color: #bdb4fd;
+    margin-left: 89px;
+    margin-right: 89px;
+}
+
+.events_overview
+{
+    margin-top: 160px;
+}
+
+#Event_icon
+{
+    width: 490px;
+    height: 380px;
+}
+
+.info
+{
+    padding-left: 40px;
+}
+
+.info h4
+{
+    font-size: 3.5rem;
+    margin-bottom: 27px;
+}
+
+#secondpara, #thirdpara
+{
+    padding-top: 19px;
+}
+
+.info h6
+{
+    margin-top: 33px;
+    font-size: 1.2rem;
+}
+
+.more
+{
+    display: flex;
+    justify-content: center;
+}
+
+.circle
+{
+    border-radius: 200px;
+    width: 5px;
+    height: 5px;
+    border: 2px solid white;
+    background: none;
+    padding: 4px;
+    margin: 6px;
+}
+
+#filled
+{
+    background-color: white;
+}
+
+.circle:hover
+{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+footer
+{
+    background-color: rgb(0, 0, 78);
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.copyright
+{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.links, .reach
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.links a, .reach a
+{
+    text-decoration: none;
+    color: white;
+    margin: 9px;
+    display: inline;
+}
+
+.links h5, .reach h5
+{
+    margin-bottom: 9px;
+}
+
+.top
+{
+    display: flex;
+    margin: 18px;
+}
+
+.reach
+{
+    margin-left: 75%;
+}
+
+.pre-animate 
+{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate 
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card 
+{
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.card.slide-out 
+{
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.card.slide-in 
+{
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.card.active 
+{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 0; 
+}
+
+.content {
+  flex: 1;
+}
